@@ -3,7 +3,7 @@ var {Link, IndexLink} = require('react-router'); // Destructured ES6, require('r
 
 var Nav = React.createClass({
   render: function () {
-    return (
+    return ( 
       <div className="top-bar">
         <div className="top-bar-left">
           <ul className="menu">

@@ -3,7 +3,7 @@ var ReactDOM = require('react-dom');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 var Main = require('Main');
 var Standings = require('Standings');
-var Info = require('Info');
+var LeagueInfo = require('LeagueInfo');
 
 // Load Foundation
 require('style!css!foundation-sites/dist/foundation.min.css')
@@ -16,7 +16,7 @@ ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
       <Route path="/standings" component={Standings}/>
-      <IndexRoute component={Info}/>
+      <IndexRoute component={LeagueInfo}/>
     </Route>
   </Router>,
   document.getElementById('app')

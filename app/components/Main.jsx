@@ -1,6 +1,6 @@
 var React = require('react');
 var Nav = require('Nav');
-var Info = require('Info');
+var LeagueInfo = require('LeagueInfo');
 
 var Main = (props) => {
   return (

@@ -24,8 +24,9 @@ module.exports = {
     alias: {
       Main: 'app/components/Main.jsx',
       Nav: 'app/components/Nav.jsx',
-      Info: 'app/components/Info.jsx',
+      LeagueInfo: 'app/components/LeagueInfo.jsx',
       Standings: 'app/components/Standings.jsx',
+      TeamCard: 'app/components/TeamCard.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']
