@@ -1767,7 +1767,6 @@ var Standings = React.createClass({
             })}
           </tbody>
         </table>
-
       </div>
     );
   }
