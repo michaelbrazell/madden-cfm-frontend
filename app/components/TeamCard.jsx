@@ -496,7 +496,6 @@ var TeamCard = React.createClass({
             <div className="columns small-12 medium-6 large-3" key={i}>
               <div className="card">
                 <div className={'image color-'+ team.abbrName}>
-
                   <span className="title">{team.cityName} {team.displayName}</span>
                 </div>
                 <div className="content">
