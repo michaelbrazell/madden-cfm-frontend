@@ -11,7 +11,7 @@ var LeagueInfo = React.createClass({
           <li>Loop through teams from leagueTeamInfo.json</li>
         </ul>
         <h2>Teams</h2>
-        <div class="row">
+        <div className="row">
           <TeamCard />
         </div>
       </div>
