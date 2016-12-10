@@ -1,0 +1,34 @@
+Team          Color         LogoID      Hex
+==================================
+Ravens        4985505       24          #280353
+Steelers      16763904      28
+Bengals       15220224      1
+Browns        16727040      4
+Jaguars       99227         16
+Titans        2077183       29
+Texans        1820          31
+Colts         13209         9
+Dolphins      36503         11
+Jets          1846565       17
+Patriots      5426          21
+Bills         13209         2           #00338D
+Raiders       10066329      22
+Broncos       13209         3
+Chargers      33988         7
+Chiefs        10027008      8
+Lions         29372         18
+Packers       680214        19
+Vikings       4994443       30
+Bears         726570        0
+Falcons       10027008      13          #A6192D
+Panthers      33988         20
+Saints        9866066       26
+Buccaneers    13961738      5
+Cowboys       13209         10
+Eagles        1330259       12
+Giants        13209         15
+Redskins      4132880       25
+49ers         10027008      14
+Rams          5426          23
+Seahawks      5426          27
+Cardinals     10027008      6           #9B2743

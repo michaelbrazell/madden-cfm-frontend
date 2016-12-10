@@ -1,1 +1,88 @@
 // Styles
+
+/* Card Styles */
+@import url(//fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,900);
+
+.card {
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  margin-bottom: 20px;
+  color: #272727;
+  border-radius: 2px;
+  .title {
+    line-height: 3rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  .content {
+    padding: 1.3rem;
+    font-weight: 300;
+    border-radius: 0 0 2px 2px;
+  }
+  p {
+  margin: 0;
+  }
+  .action {
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 1.3rem;
+  }
+  a {
+    color: #ffab40;
+    margin-right: 1.3rem;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .image {
+    position: relative;
+    background-color: #ccc;
+    height: 200px;
+    .title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 1.3rem;
+      color: #fff;
+    }
+    img {
+      border-radius: 2px 2px 0 0;
+    }
+  }
+}
+
+/* End Card Styles */
+
+/* Team Colors corresponding to color ID */
+.color-BAL { background-color: #280353 !important; }
+.color-PIT { background-color: #FFB612 !important; }
+.color-CIN { background-color: #FB4F14 !important; }
+.color-CLE { background-color: #512F2D !important; }
+.color-JAX { background-color: #006778 !important; }
+.color-TEN { background-color: #648FCC !important; }
+.color-HOU { background-color: #B31B34 !important; }
+.color-IND { background-color: #003B7B !important; }
+.color-MIA { background-color: #008D97 !important; }
+.color-NYJ { background-color: #0C371D !important; }
+.color-NE { background-color: #0D254C !important; }
+.color-BUF { background-color: #00338D !important; }
+.color-OAK { background-color: #000 !important; }
+.color-DEN { background-color: #FB4F14 !important; }
+.color-SD { background-color: #0072CE !important; }
+.color-KC { background-color: #B20032 !important; }
+.color-DET { background-color: #006DB0 !important; }
+.color-GB { background-color: #203731 !important; }
+.color-MIN { background-color: #582C81 !important; }
+.color-CHI { background-color: #DD4814 !important; }
+.color-ATL { background-color: #A6192D !important; }
+.color-CAR { background-color: #0088CE !important; }
+.color-NO { background-color: #D2B887 !important; }
+.color-TB { background-color: #D60A0B !important; }
+.color-DAL { background-color: #0D254C !important; }
+.color-PHI { background-color: #003B48 !important; }
+.color-NYG { background-color: #192F6B !important; }
+.color-WAS { background-color: #773141 !important; }
+.color-SF { background-color: #AF1E2C !important; }
+.color-LA { background-color: #13264B !important; }
+.color-SEA { background-color: #69BE28 !important; }
+.color-ARI { background-color: #9B2743 !important; }

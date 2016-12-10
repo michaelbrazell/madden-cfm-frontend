@@ -493,9 +493,21 @@ var TeamCard = React.createClass({
       <div>
         {this.state.teams.map(function(team, i){
            return (
-            <div className="columns small-12 medium-3" key={i}>
-              <h4>{team.cityName} {team.displayName}</h4>
-              <p>Overall: {team.ovrRating}</p>
+            <div className="columns small-12 medium-6 large-3" key={i}>
+              <div className="card">
+                <div className={'image color-'+ team.abbrName}>
+
+                  <span className="title">{team.cityName} {team.displayName}</span>
+                </div>
+                <div className="content">
+                  <p>Overall: {team.ovrRating}</p>
+                  <p>Division: {team.divName}</p>
+                  <p>{ team.userName.length > 1 ?  team.userName : 'Not owned' }</p>
+                </div>
+                <div className="action">
+                  <a href='#'>View Team</a>
+                </div>
+              </div>
             </div>
            )
          })}
