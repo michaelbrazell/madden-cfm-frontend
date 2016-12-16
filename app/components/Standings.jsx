@@ -1735,6 +1735,10 @@ var Standings = React.createClass({
     } ]
     return { teams } ;
   },
+  componentDidMount: function() {
+    // Not working on load, maybe need to call after main renders?
+    $("#stadings-east").tablesorter();
+  },
   render: function() {
     return (
       <div>
@@ -1743,44 +1747,46 @@ var Standings = React.createClass({
           <div className="columns small-12 medium-6">
             <h2>AFC</h2>
             <h3>East</h3>
-              <table>
+            <div className="scroll">
+              <table className="tablesorter" id="standings-east">
                 <thead>
                   <tr>
                     <th></th>
-                    <th>Wins</th>
-                    <th>Losses</th>
-                    <th>Ties</th>
-                    <th>Points For</th>
-                    <th>Points Against</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>T</th>
+                    <th>PF</th>
+                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
                   {this.state.teams.map(function(team, i){
                     if (team.divisionName === 'AFC East') {
                       return (
-                         <tr>
-                           <td>{team.teamName}</td>
-                           <td>{team.totalWins}</td>
-                           <td>{team.totalLosses}</td>
-                           <td>{team.totalTies}</td>
-                           <td>{team.ptsFor}</td>
-                           <td>{team.ptsAgainst}</td>
-                         </tr>
+                        <tr>
+                          <td>{team.teamName}</td>
+                          <td>{team.totalWins}</td>
+                          <td>{team.totalLosses}</td>
+                          <td>{team.totalTies}</td>
+                          <td>{team.ptsFor}</td>
+                          <td>{team.ptsAgainst}</td>
+                        </tr>
                       )
                     }
                   })}
                 </tbody>
               </table>
+            </div>
             <h3>North</h3>
               <table>
                 <thead>
                   <tr>
                     <th></th>
-                    <th>Wins</th>
-                    <th>Losses</th>
-                    <th>Ties</th>
-                    <th>Points For</th>
-                    <th>Points Against</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>T</th>
+                    <th>PF</th>
+                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1805,11 +1811,11 @@ var Standings = React.createClass({
                 <thead>
                   <tr>
                     <th></th>
-                    <th>Wins</th>
-                    <th>Losses</th>
-                    <th>Ties</th>
-                    <th>Points For</th>
-                    <th>Points Against</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>T</th>
+                    <th>PF</th>
+                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1834,11 +1840,11 @@ var Standings = React.createClass({
                 <thead>
                   <tr>
                     <th></th>
-                    <th>Wins</th>
-                    <th>Losses</th>
-                    <th>Ties</th>
-                    <th>Points For</th>
-                    <th>Points Against</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>T</th>
+                    <th>PF</th>
+                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1866,11 +1872,11 @@ var Standings = React.createClass({
                 <thead>
                   <tr>
                     <th></th>
-                    <th>Wins</th>
-                    <th>Losses</th>
-                    <th>Ties</th>
-                    <th>Points For</th>
-                    <th>Points Against</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>T</th>
+                    <th>PF</th>
+                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1895,11 +1901,11 @@ var Standings = React.createClass({
                 <thead>
                   <tr>
                     <th></th>
-                    <th>Wins</th>
-                    <th>Losses</th>
-                    <th>Ties</th>
-                    <th>Points For</th>
-                    <th>Points Against</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>T</th>
+                    <th>PF</th>
+                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1924,11 +1930,11 @@ var Standings = React.createClass({
                 <thead>
                   <tr>
                     <th></th>
-                    <th>Wins</th>
-                    <th>Losses</th>
-                    <th>Ties</th>
-                    <th>Points For</th>
-                    <th>Points Against</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>T</th>
+                    <th>PF</th>
+                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -1953,11 +1959,11 @@ var Standings = React.createClass({
                 <thead>
                   <tr>
                     <th></th>
-                    <th>Wins</th>
-                    <th>Losses</th>
-                    <th>Ties</th>
-                    <th>Points For</th>
-                    <th>Points Against</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>T</th>
+                    <th>PF</th>
+                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
