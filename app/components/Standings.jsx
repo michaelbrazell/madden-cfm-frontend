@@ -1739,34 +1739,250 @@ var Standings = React.createClass({
     return (
       <div>
         <h1>Standings</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>Team Name</th>
-              <th>Division</th>
-              <th>Wins</th>
-              <th>Losses</th>
-              <th>Ties</th>
-              <th>Points For</th>
-              <th>Points Against</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.teams.map(function(team, i){
-               return (
+        <div className="row">
+          <div className="columns small-12 medium-6">
+            <h2>AFC</h2>
+            <h3>East</h3>
+              <table>
+                <thead>
                   <tr>
-                    <td>{team.teamName}</td>
-                    <td>{team.divisionName}</td>
-                    <td>{team.totalWins}</td>
-                    <td>{team.totalLosses}</td>
-                    <td>{team.totalTies}</td>
-                    <td>{team.ptsFor}</td>
-                    <td>{team.ptsAgainst}</td>
+                    <th></th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Ties</th>
+                    <th>Points For</th>
+                    <th>Points Against</th>
                   </tr>
-               )
-            })}
-          </tbody>
-        </table>
+                </thead>
+                <tbody>
+                  {this.state.teams.map(function(team, i){
+                    if (team.divisionName === 'AFC East') {
+                      return (
+                         <tr>
+                           <td>{team.teamName}</td>
+                           <td>{team.totalWins}</td>
+                           <td>{team.totalLosses}</td>
+                           <td>{team.totalTies}</td>
+                           <td>{team.ptsFor}</td>
+                           <td>{team.ptsAgainst}</td>
+                         </tr>
+                      )
+                    }
+                  })}
+                </tbody>
+              </table>
+            <h3>North</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Ties</th>
+                    <th>Points For</th>
+                    <th>Points Against</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.teams.map(function(team, i){
+                    if (team.divisionName === 'AFC North') {
+                      return (
+                         <tr>
+                           <td>{team.teamName}</td>
+                           <td>{team.totalWins}</td>
+                           <td>{team.totalLosses}</td>
+                           <td>{team.totalTies}</td>
+                           <td>{team.ptsFor}</td>
+                           <td>{team.ptsAgainst}</td>
+                         </tr>
+                      )
+                    }
+                  })}
+                </tbody>
+              </table>
+            <h3>South</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Ties</th>
+                    <th>Points For</th>
+                    <th>Points Against</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.teams.map(function(team, i){
+                    if (team.divisionName === 'AFC South') {
+                      return (
+                         <tr>
+                           <td>{team.teamName}</td>
+                           <td>{team.totalWins}</td>
+                           <td>{team.totalLosses}</td>
+                           <td>{team.totalTies}</td>
+                           <td>{team.ptsFor}</td>
+                           <td>{team.ptsAgainst}</td>
+                         </tr>
+                      )
+                    }
+                  })}
+                </tbody>
+              </table>
+            <h3>West</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Ties</th>
+                    <th>Points For</th>
+                    <th>Points Against</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.teams.map(function(team, i){
+                    if (team.divisionName === 'AFC West') {
+                      return (
+                         <tr>
+                           <td>{team.teamName}</td>
+                           <td>{team.totalWins}</td>
+                           <td>{team.totalLosses}</td>
+                           <td>{team.totalTies}</td>
+                           <td>{team.ptsFor}</td>
+                           <td>{team.ptsAgainst}</td>
+                         </tr>
+                      )
+                    }
+                  })}
+                </tbody>
+              </table>
+          </div>
+          <div className="columns small-12 medium-6">
+            <h2>NFC</h2>
+            <h3>East</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Ties</th>
+                    <th>Points For</th>
+                    <th>Points Against</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.teams.map(function(team, i){
+                    if (team.divisionName === 'NFC East') {
+                      return (
+                         <tr>
+                           <td>{team.teamName}</td>
+                           <td>{team.totalWins}</td>
+                           <td>{team.totalLosses}</td>
+                           <td>{team.totalTies}</td>
+                           <td>{team.ptsFor}</td>
+                           <td>{team.ptsAgainst}</td>
+                         </tr>
+                      )
+                    }
+                  })}
+                </tbody>
+              </table>
+            <h3>North</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Ties</th>
+                    <th>Points For</th>
+                    <th>Points Against</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.teams.map(function(team, i){
+                    if (team.divisionName === 'NFC North') {
+                      return (
+                         <tr>
+                           <td>{team.teamName}</td>
+                           <td>{team.totalWins}</td>
+                           <td>{team.totalLosses}</td>
+                           <td>{team.totalTies}</td>
+                           <td>{team.ptsFor}</td>
+                           <td>{team.ptsAgainst}</td>
+                         </tr>
+                      )
+                    }
+                  })}
+                </tbody>
+              </table>
+            <h3>South</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Ties</th>
+                    <th>Points For</th>
+                    <th>Points Against</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.teams.map(function(team, i){
+                    if (team.divisionName === 'NFC South') {
+                      return (
+                         <tr>
+                           <td>{team.teamName}</td>
+                           <td>{team.totalWins}</td>
+                           <td>{team.totalLosses}</td>
+                           <td>{team.totalTies}</td>
+                           <td>{team.ptsFor}</td>
+                           <td>{team.ptsAgainst}</td>
+                         </tr>
+                      )
+                    }
+                  })}
+                </tbody>
+              </table>
+            <h3>West</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Ties</th>
+                    <th>Points For</th>
+                    <th>Points Against</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.teams.map(function(team, i){
+                    if (team.divisionName === 'NFC West') {
+                      return (
+                         <tr>
+                           <td>{team.teamName}</td>
+                           <td>{team.totalWins}</td>
+                           <td>{team.totalLosses}</td>
+                           <td>{team.totalTies}</td>
+                           <td>{team.ptsFor}</td>
+                           <td>{team.ptsAgainst}</td>
+                         </tr>
+                      )
+                    }
+                  })}
+                </tbody>
+              </table>
+          </div>
+        </div>
+        <p>To do:</p>
+        <ul>
+          <li>Break individual tables into their own divisionalStandings component</li>
+        </ul>
       </div>
     );
   }
