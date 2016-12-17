@@ -28,6 +28,7 @@ module.exports = {
       LeagueInfo: 'app/components/LeagueInfo.jsx',
       Standings: 'app/components/Standings.jsx',
       TeamCard: 'app/components/TeamCard.jsx',
+      TeamStats: 'app/components/TeamStats.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']
