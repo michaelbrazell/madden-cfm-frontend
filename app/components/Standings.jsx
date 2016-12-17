@@ -1,5 +1,6 @@
 var React = require('react');
-var StandingsData = require('../../public/data/leagueStandings.json');
+// Need json loader
+// var data = require('json!./data/teamStandingInfoList.json');
 
 var Standings = React.createClass({
   getInitialState: function() {
@@ -1736,8 +1737,9 @@ var Standings = React.createClass({
     return { teams } ;
   },
   componentDidMount: function() {
-    // Not working on load, maybe need to call after main renders?
-    $("#stadings-east").tablesorter();
+    $(".tablesorter").tablesorter({
+      sortList: [[1,1],[2,0]]
+    });
   },
   render: function() {
     return (
@@ -1748,7 +1750,7 @@ var Standings = React.createClass({
             <h2>AFC</h2>
             <h3>East</h3>
             <div className="scroll">
-              <table className="tablesorter" id="standings-east">
+              <table className="tablesorter" id="afc-east">
                 <thead>
                   <tr>
                     <th></th>
@@ -1778,7 +1780,7 @@ var Standings = React.createClass({
               </table>
             </div>
             <h3>North</h3>
-              <table>
+              <table className="tablesorter" id="afc-north">
                 <thead>
                   <tr>
                     <th></th>
@@ -1807,7 +1809,7 @@ var Standings = React.createClass({
                 </tbody>
               </table>
             <h3>South</h3>
-              <table>
+              <table className="tablesorter" id="afc-south">
                 <thead>
                   <tr>
                     <th></th>
@@ -1836,7 +1838,7 @@ var Standings = React.createClass({
                 </tbody>
               </table>
             <h3>West</h3>
-              <table>
+              <table className="tablesorter" id="afc-west">
                 <thead>
                   <tr>
                     <th></th>
@@ -1868,7 +1870,7 @@ var Standings = React.createClass({
           <div className="columns small-12 medium-6">
             <h2>NFC</h2>
             <h3>East</h3>
-              <table>
+              <table className="tablesorter" id="nfc-east">
                 <thead>
                   <tr>
                     <th></th>
@@ -1897,7 +1899,7 @@ var Standings = React.createClass({
                 </tbody>
               </table>
             <h3>North</h3>
-              <table>
+              <table className="tablesorter" id="nfc-north">
                 <thead>
                   <tr>
                     <th></th>
@@ -1926,7 +1928,7 @@ var Standings = React.createClass({
                 </tbody>
               </table>
             <h3>South</h3>
-              <table>
+              <table className="tablesorter" id="nfc-south">
                 <thead>
                   <tr>
                     <th></th>
@@ -1955,7 +1957,7 @@ var Standings = React.createClass({
                 </tbody>
               </table>
             <h3>West</h3>
-              <table>
+              <table className="tablesorter" id="nfc-west">
                 <thead>
                   <tr>
                     <th></th>

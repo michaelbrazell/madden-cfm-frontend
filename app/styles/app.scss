@@ -11,7 +11,7 @@ h1 {
   margin: .5em 0;
 }
 
-ul.menu li:first-child { 
+ul.menu li:first-child {
   padding-left: 0;
 }
 
@@ -64,6 +64,14 @@ ul.menu li:first-child {
 }
 
 /* End Card Styles */
+
+/* Table Styles */
+table.tablesorter {
+  th.tablesorter-headerDesc {
+    color: red;
+  }
+}
+/* End Table Styles */
 
 /* Team Colors corresponding to color ID */
 .color-BAL { background-color: #280353 !important; }
