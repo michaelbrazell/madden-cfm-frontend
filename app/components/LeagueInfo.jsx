@@ -22,7 +22,6 @@ var LeagueInfo = React.createClass({
           <li>Add logos to cards</li>
           <li>Change styling:
             <ul>
-              <li>Add overall as a badge in the card header</li>
               <li>Add badge for user owned teams</li>
             </ul>
           </li>

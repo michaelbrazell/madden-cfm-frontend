@@ -3,7 +3,8 @@ var webpack = require('webpack');
 module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
-    'script!foundation-sites/dist/js/foundation.min.js',
+    // 'script!foundation-sites/dist/js/foundation.min.js',
+    'script!foundation-sites/dist/foundation.min.js',
     'script!tablesorter/dist/js/jquery.tablesorter.min.js',
     './app/app.jsx'
   ],

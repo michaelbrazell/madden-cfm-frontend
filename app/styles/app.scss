@@ -32,6 +32,13 @@ ul.menu li:first-child {
     font-weight: 300;
     border-radius: 0 0 2px 2px;
   }
+  .badge {
+    position: absolute;
+    top: 85%;
+    left: 75%;
+    background: #909090;
+    font-size: 1.6em;
+  }
   p {
   margin: 0;
   }
@@ -74,35 +81,73 @@ table.tablesorter {
 /* End Table Styles */
 
 /* Team Colors corresponding to color ID */
+.color-ARI { background-color: #9B2743 !important; }
+.color-ATL { background-color: #A6192D !important; }
 .color-BAL { background-color: #280353 !important; }
-.color-PIT { background-color: #FFB612 !important; }
-.color-CIN { background-color: #FB4F14 !important; }
+// .color-BUF { background-color: #00338D !important; }
+.color-BUF { background-color: #FFF !important; }
+.color-CAR { background-color: #0088CE !important; }
+.color-CHI { background-color: #DD4814 !important; }
+// .color-CIN { background-color: #FB4F14 !important; }
+.color-CIN { background-color: #FFF !important; }
 .color-CLE { background-color: #FE3C00 !important; }
-.color-JAX { background-color: #006778 !important; }
-.color-TEN { background-color: #648FCC !important; }
-.color-HOU { background-color: #B31B34 !important; }
-.color-IND { background-color: #003B7B !important; }
-.color-MIA { background-color: #008D97 !important; }
-.color-NYJ { background-color: #0C371D !important; }
-.color-NE { background-color: #0D254C !important; }
-.color-BUF { background-color: #00338D !important; }
-.color-OAK { background-color: #000 !important; }
+.color-DAL { background-color: #0D254C !important; }
 .color-DEN { background-color: #FB4F14 !important; }
-.color-SD { background-color: #0072CE !important; }
-.color-KC { background-color: #B20032 !important; }
 .color-DET { background-color: #006DB0 !important; }
 .color-GB { background-color: #203731 !important; }
-.color-MIN { background-color: #582C81 !important; }
-.color-CHI { background-color: #DD4814 !important; }
-.color-ATL { background-color: #A6192D !important; }
-.color-CAR { background-color: #0088CE !important; }
-.color-NO { background-color: #D2B887 !important; }
-.color-TB { background-color: #D60A0B !important; }
-.color-DAL { background-color: #0D254C !important; }
-.color-PHI { background-color: #003B48 !important; }
-.color-NYG { background-color: #192F6B !important; }
-.color-WAS { background-color: #773141 !important; }
-.color-SF { background-color: #AF1E2C !important; }
+.color-HOU { background-color: #B31B34 !important; }
+// .color-IND { background-color: #003B7B !important; }
+.color-IND { background-color: #FFF !important; }
+.color-JAX { background-color: #006778 !important; }
+.color-KC { background-color: #B20032 !important; }
 .color-LA { background-color: #13264B !important; }
-.color-SEA { background-color: #002244 !important; }
-.color-ARI { background-color: #9B2743 !important; }
+.color-MIA { background-color: #008D97 !important; }
+.color-MIN { background-color: #582C81 !important; }
+.color-NE { background-color: #dcdedc !important; }
+.color-NO { background-color: #D2B887 !important; }
+.color-NYG { background-color: #192F6B !important; }
+// .color-NYJ { background-color: #0C371D !important; }
+.color-NYJ { background-color: #fff !important; }
+.color-OAK { background-color: #c4cacc !important; }
+.color-PHI { background-color: #003B48 !important; }
+.color-PIT { background-color: #FFB612 !important; }
+.color-SD { background-color: #0072CE !important; }
+.color-SEA { background-color: #66bd29 !important; }
+.color-SF { background-color: #AF1E2C !important; }
+.color-TB { background-color: #D60A0B !important; }
+.color-TEN { background-color: #648FCC !important; }
+.color-WAS { background-color: #773141 !important; }
+
+/* Team Logos */
+.logo-ARI { background: #AF1E2C url('/img/logos/ari-cardinals.png') 50% no-repeat; background-size: contain; }
+.logo-ATL { background: #AF1E2C url('/img/logos/atl-falcons.png') 50% no-repeat; background-size: contain; }
+.logo-BAL { background: #AF1E2C url('/img/logos/bal-ravens.png') 50% no-repeat; background-size: contain; }
+.logo-BUF { background: #AF1E2C url('/img/logos/buf-bills.png') 50% no-repeat; background-size: contain; }
+.logo-CAR { background: #AF1E2C url('/img/logos/car-panthers.png') 50% no-repeat; background-size: contain; }
+.logo-CHI { background: #AF1E2C url('/img/logos/chi-bears.png') 50% no-repeat; background-size: contain; }
+.logo-CIN { background: #AF1E2C url('/img/logos/cin-bengals.gif') 50% no-repeat; background-size: contain; }
+.logo-CLE { background: #AF1E2C url('/img/logos/cle-browns.png') 50% no-repeat; background-size: contain; }
+.logo-DAL { background: #AF1E2C url('/img/logos/dal-cowboys.gif') 50% no-repeat; background-size: contain; }
+.logo-DEN { background: #AF1E2C url('/img/logos/den-broncos.png') 50% no-repeat; background-size: contain; }
+.logo-DET { background: #AF1E2C url('/img/logos/det-lions.png') 50% no-repeat; background-size: contain; }
+.logo-GB { background: #AF1E2C url('/img/logos/gb-packers.png') 50% no-repeat; background-size: contain; }
+.logo-HOU { background: #AF1E2C url('/img/logos/hou-texans.png') 50% no-repeat; background-size: contain; }
+.logo-IND { background: #AF1E2C url('/img/logos/ind-colts.png') 50% no-repeat; background-size: contain; }
+.logo-JAX { background: #AF1E2C url('/img/logos/jax-jaguars.png') 50% no-repeat; background-size: contain; }
+.logo-KC { background: #AF1E2C url('/img/logos/kc-chiefs.png') 50% no-repeat; background-size: contain; }
+.logo-LA { background: #AF1E2C url('/img/logos/la-rams.png') 50% no-repeat; background-size: contain; }
+.logo-MIA { background: #AF1E2C url('/img/logos/mia-dolphins.png') 50% no-repeat; background-size: contain; }
+.logo-MIN { background: #AF1E2C url('/img/logos/min-vikings.png') 50% no-repeat; background-size: contain; }
+.logo-NE { background: #AF1E2C url('/img/logos/ne-patriots.gif') 50% no-repeat; background-size: contain; }
+.logo-NO { background: #AF1E2C url('/img/logos/no-saints.gif') 50% no-repeat; background-size: contain; }
+.logo-NYG { background: #AF1E2C url('/img/logos/ny-giants.gif') 50% no-repeat; background-size: contain; }
+.logo-NYJ { background: #AF1E2C url('/img/logos/ny-jets.gif') 50% no-repeat; background-size: contain; }
+.logo-OAK { background: #AF1E2C url('/img/logos/oak-raiders.gif') 50% no-repeat; background-size: contain; }
+.logo-PHI { background: #AF1E2C url('/img/logos/phi-eagles.png') 50% no-repeat; background-size: contain; }
+.logo-PIT { background: #AF1E2C url('/img/logos/pit-steelers.png') 50% no-repeat; background-size: contain; }
+.logo-SD { background: #AF1E2C url('/img/logos/sd-chargers.png') 50% no-repeat; background-size: contain; }
+.logo-SEA { background: #AF1E2C url('/img/logos/sea-seahawks.png') 50% no-repeat; background-size: contain; }
+.logo-SF { background: #AF1E2C url('/img/logos/sf-49ers.gif') 50% no-repeat; background-size: contain; }
+.logo-TB { background: #AF1E2C url('/img/logos/tb-bucs.png') 50% no-repeat; background-size: contain; }
+.logo-TEN { background: #AF1E2C url('/img/logos/ten-titans.png') 50% no-repeat; background-size: contain; }
+.logo-WAS { background: #AF1E2C url('/img/logos/was-redskins.gif') 50% no-repeat; background-size: contain; }

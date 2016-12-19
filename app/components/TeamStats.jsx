@@ -17,7 +17,7 @@ var TeamStats = React.createClass({
         <h1>Team Statistics</h1>
         <div className="row">
           <div className="columns small-12 medium-12">
-            <div className="scroll">
+            <div className="table-scroll">
               <table className="tablesorter" id="afc-east">
                 <thead>
                   <tr>
@@ -27,6 +27,9 @@ var TeamStats = React.createClass({
                     <th>Total Yards</th>
                     <th>Passing Yards</th>
                     <th>Rushing Yards</th>
+                    <th>Total Defense</th>
+                    <th>Def Passing Yards</th>
+                    <th>Def Rushing Yards</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -39,6 +42,9 @@ var TeamStats = React.createClass({
                         <td>{team.offTotalYds} ({team.offTotalYdsRank})</td>
                         <td>{team.offPassYds} ({team.offPassYdsRank})</td>
                         <td>{team.offRushYds} ({team.offRushYdsRank})</td>
+                        <td>{team.defTotalYds} ({team.defTotalYdsRank})</td>
+                        <td>{team.defPassYds} ({team.defPassYdsRank})</td>
+                        <td>{team.defRushYds} ({team.defRushYdsRank})</td>
                       </tr>
                     )
                   })}

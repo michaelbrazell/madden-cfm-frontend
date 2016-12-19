@@ -7,7 +7,8 @@ var LeagueInfo = require('LeagueInfo');
 var TeamStats = require('TeamStats');
 
 // Load Foundation
-require('style!css!foundation-sites/dist/css/foundation.min.css')
+// require('style!css!foundation-sites/dist/css/foundation.min.css')
+require('style!css!foundation-sites/dist/foundation.min.css')
 $(document).foundation();
 
 // App CSS

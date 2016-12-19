@@ -5,11 +5,17 @@ var Standings = React.createClass({
   getInitialState: function() {
     var teams = data;
     return { teams } ;
+    var playoffStatus = function () {
+      if (team.playoffStatus === '4') {
+        console.log('Homefield throughout');
+      }
+    }
   },
   componentDidMount: function() {
     $(".tablesorter").tablesorter({
       sortList: [[1,1],[2,0]]
     });
+
   },
   render: function() {
     return (
@@ -27,8 +33,6 @@ var Standings = React.createClass({
                     <th>W</th>
                     <th>L</th>
                     <th>T</th>
-                    <th>PF</th>
-                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -36,12 +40,10 @@ var Standings = React.createClass({
                     if (team.divisionName === 'AFC East') {
                       return (
                         <tr>
-                          <td>{team.teamName}</td>
+                          <td>{team.teamName} ({team.playoffStatus})</td>
                           <td>{team.totalWins}</td>
                           <td>{team.totalLosses}</td>
                           <td>{team.totalTies}</td>
-                          <td>{team.ptsFor}</td>
-                          <td>{team.ptsAgainst}</td>
                         </tr>
                       )
                     }
@@ -57,8 +59,6 @@ var Standings = React.createClass({
                     <th>W</th>
                     <th>L</th>
                     <th>T</th>
-                    <th>PF</th>
-                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -66,12 +66,10 @@ var Standings = React.createClass({
                     if (team.divisionName === 'AFC North') {
                       return (
                          <tr>
-                           <td>{team.teamName}</td>
+                           <td>{team.teamName} ({team.playoffStatus})</td>
                            <td>{team.totalWins}</td>
                            <td>{team.totalLosses}</td>
                            <td>{team.totalTies}</td>
-                           <td>{team.ptsFor}</td>
-                           <td>{team.ptsAgainst}</td>
                          </tr>
                       )
                     }
@@ -86,8 +84,6 @@ var Standings = React.createClass({
                     <th>W</th>
                     <th>L</th>
                     <th>T</th>
-                    <th>PF</th>
-                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -95,12 +91,10 @@ var Standings = React.createClass({
                     if (team.divisionName === 'AFC South') {
                       return (
                          <tr>
-                           <td>{team.teamName}</td>
+                           <td>{team.teamName} ({team.playoffStatus})</td>
                            <td>{team.totalWins}</td>
                            <td>{team.totalLosses}</td>
                            <td>{team.totalTies}</td>
-                           <td>{team.ptsFor}</td>
-                           <td>{team.ptsAgainst}</td>
                          </tr>
                       )
                     }
@@ -115,8 +109,6 @@ var Standings = React.createClass({
                     <th>W</th>
                     <th>L</th>
                     <th>T</th>
-                    <th>PF</th>
-                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -124,12 +116,10 @@ var Standings = React.createClass({
                     if (team.divisionName === 'AFC West') {
                       return (
                          <tr>
-                           <td>{team.teamName}</td>
+                           <td>{team.teamName} ({team.playoffStatus})</td>
                            <td>{team.totalWins}</td>
                            <td>{team.totalLosses}</td>
                            <td>{team.totalTies}</td>
-                           <td>{team.ptsFor}</td>
-                           <td>{team.ptsAgainst}</td>
                          </tr>
                       )
                     }
@@ -147,8 +137,6 @@ var Standings = React.createClass({
                     <th>W</th>
                     <th>L</th>
                     <th>T</th>
-                    <th>PF</th>
-                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -156,12 +144,10 @@ var Standings = React.createClass({
                     if (team.divisionName === 'NFC East') {
                       return (
                          <tr>
-                           <td>{team.teamName}</td>
+                           <td>{team.teamName} ({team.playoffStatus})</td>
                            <td>{team.totalWins}</td>
                            <td>{team.totalLosses}</td>
                            <td>{team.totalTies}</td>
-                           <td>{team.ptsFor}</td>
-                           <td>{team.ptsAgainst}</td>
                          </tr>
                       )
                     }
@@ -176,8 +162,6 @@ var Standings = React.createClass({
                     <th>W</th>
                     <th>L</th>
                     <th>T</th>
-                    <th>PF</th>
-                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -185,12 +169,10 @@ var Standings = React.createClass({
                     if (team.divisionName === 'NFC North') {
                       return (
                          <tr>
-                           <td>{team.teamName}</td>
+                           <td>{team.teamName} ({team.playoffStatus}) </td>
                            <td>{team.totalWins}</td>
                            <td>{team.totalLosses}</td>
                            <td>{team.totalTies}</td>
-                           <td>{team.ptsFor}</td>
-                           <td>{team.ptsAgainst}</td>
                          </tr>
                       )
                     }
@@ -205,8 +187,6 @@ var Standings = React.createClass({
                     <th>W</th>
                     <th>L</th>
                     <th>T</th>
-                    <th>PF</th>
-                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -214,12 +194,10 @@ var Standings = React.createClass({
                     if (team.divisionName === 'NFC South') {
                       return (
                          <tr>
-                           <td>{team.teamName}</td>
+                           <td>{team.teamName} ({team.playoffStatus})</td>
                            <td>{team.totalWins}</td>
                            <td>{team.totalLosses}</td>
                            <td>{team.totalTies}</td>
-                           <td>{team.ptsFor}</td>
-                           <td>{team.ptsAgainst}</td>
                          </tr>
                       )
                     }
@@ -234,8 +212,6 @@ var Standings = React.createClass({
                     <th>W</th>
                     <th>L</th>
                     <th>T</th>
-                    <th>PF</th>
-                    <th>PA</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -243,12 +219,10 @@ var Standings = React.createClass({
                     if (team.divisionName === 'NFC West') {
                       return (
                          <tr>
-                           <td>{team.teamName}</td>
+                           <td>{team.teamName} ({team.playoffStatus})</td>
                            <td>{team.totalWins}</td>
                            <td>{team.totalLosses}</td>
                            <td>{team.totalTies}</td>
-                           <td>{team.ptsFor}</td>
-                           <td>{team.ptsAgainst}</td>
                          </tr>
                       )
                     }

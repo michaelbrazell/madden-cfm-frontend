@@ -13,11 +13,11 @@ var TeamCard = React.createClass({
            return (
             <div className="columns small-12 medium-6 large-3" key={i}>
               <div className="card">
-                <div className={'image color-'+ team.abbrName}>
-                  <span className="title">{team.cityName} {team.displayName}</span>
+                <div className={'image color-'+ team.abbrName +' logo-'+ team.abbrName}>
+                  <span className="badge primary">{team.ovrRating}</span>
                 </div>
                 <div className="content">
-                  <p>Overall: {team.ovrRating}</p>
+                  <p className="title">{team.cityName} {team.displayName}</p>
                   <p>Division: {team.divName}</p>
                   <p>{ team.userName.length > 1 ?  team.userName : 'Not owned' }</p>
                 </div>
