@@ -5,11 +5,6 @@ var Standings = React.createClass({
   getInitialState: function() {
     var teams = data;
     return { teams } ;
-    var playoffStatus = function () {
-      if (team.playoffStatus === '4') {
-        console.log('Homefield throughout');
-      }
-    }
   },
   componentDidMount: function() {
     $(".tablesorter").tablesorter({
