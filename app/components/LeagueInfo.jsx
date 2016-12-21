@@ -19,7 +19,6 @@ var LeagueInfo = React.createClass({
               <li>Dyanmic team routes</li>
             </ul>
           </li>
-          <li>Add logos to cards</li>
           <li>Change styling:
             <ul>
               <li>Add badge for user owned teams</li>
