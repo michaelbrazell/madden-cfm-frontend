@@ -4,7 +4,36 @@ var data = require('json!../../public/data/teamStandingInfoList.json');
 var Standings = React.createClass({
   getInitialState: function() {
     var teams = data;
-    return { teams } ;
+
+    var groups = {};
+    for(var i = 0; i < data.length; i++) {
+      var item = data[i];
+
+      if(!groups[item.divisionName]) {
+          groups[item.divisionName] = [];
+      }
+
+      groups[item.divisionName].push({
+          divisionName: item.divisionName,
+          teamName: item.teamName,
+          wins: item.totalWins,
+          losses: item.totalLosses,
+          ties: item.totalTies
+      });
+    }
+
+    var result = [];
+
+    for(var x in groups) {
+      if(Object.prototype.hasOwnProperty.call(groups, x)) {
+          var obj = {};
+          obj[x] = groups[x];
+          result.push(obj);
+      }
+    }
+    console.log(groups);
+    return { groups }
+
   },
   componentDidMount: function() {
     $(".tablesorter").tablesorter({
@@ -16,6 +45,24 @@ var Standings = React.createClass({
     return (
       <div>
         <h1>Standings</h1>
+        <div className="row">
+          <div className="columns small-12">
+            <h2>Total Teams</h2>
+
+              {Object.keys(this.state.groups).map(function(division) {
+                    return (
+                      <div>
+                        <h3>{division}</h3>
+                        {/* Try then mapping through the keys of Division */}
+
+
+                      </div>
+
+                    )
+                })}
+
+          </div>
+        </div>
         <div className="row">
           <div className="columns small-12 medium-6">
             <h2>AFC</h2>
@@ -31,18 +78,7 @@ var Standings = React.createClass({
                   </tr>
                 </thead>
                 <tbody>
-                  {this.state.teams.map(function(team, i){
-                    if (team.divisionName === 'AFC East') {
-                      return (
-                        <tr>
-                          <td>{team.teamName} ({team.playoffStatus})</td>
-                          <td>{team.totalWins}</td>
-                          <td>{team.totalLosses}</td>
-                          <td>{team.totalTies}</td>
-                        </tr>
-                      )
-                    }
-                  })}
+
                 </tbody>
               </table>
             </div>
@@ -57,18 +93,7 @@ var Standings = React.createClass({
                   </tr>
                 </thead>
                 <tbody>
-                  {this.state.teams.map(function(team, i){
-                    if (team.divisionName === 'AFC North') {
-                      return (
-                         <tr>
-                           <td>{team.teamName} ({team.playoffStatus})</td>
-                           <td>{team.totalWins}</td>
-                           <td>{team.totalLosses}</td>
-                           <td>{team.totalTies}</td>
-                         </tr>
-                      )
-                    }
-                  })}
+
                 </tbody>
               </table>
             <h3>South</h3>
@@ -82,18 +107,7 @@ var Standings = React.createClass({
                   </tr>
                 </thead>
                 <tbody>
-                  {this.state.teams.map(function(team, i){
-                    if (team.divisionName === 'AFC South') {
-                      return (
-                         <tr>
-                           <td>{team.teamName} ({team.playoffStatus})</td>
-                           <td>{team.totalWins}</td>
-                           <td>{team.totalLosses}</td>
-                           <td>{team.totalTies}</td>
-                         </tr>
-                      )
-                    }
-                  })}
+
                 </tbody>
               </table>
             <h3>West</h3>
@@ -107,18 +121,7 @@ var Standings = React.createClass({
                   </tr>
                 </thead>
                 <tbody>
-                  {this.state.teams.map(function(team, i){
-                    if (team.divisionName === 'AFC West') {
-                      return (
-                         <tr>
-                           <td>{team.teamName} ({team.playoffStatus})</td>
-                           <td>{team.totalWins}</td>
-                           <td>{team.totalLosses}</td>
-                           <td>{team.totalTies}</td>
-                         </tr>
-                      )
-                    }
-                  })}
+
                 </tbody>
               </table>
           </div>
@@ -135,18 +138,7 @@ var Standings = React.createClass({
                   </tr>
                 </thead>
                 <tbody>
-                  {this.state.teams.map(function(team, i){
-                    if (team.divisionName === 'NFC East') {
-                      return (
-                         <tr>
-                           <td>{team.teamName} ({team.playoffStatus})</td>
-                           <td>{team.totalWins}</td>
-                           <td>{team.totalLosses}</td>
-                           <td>{team.totalTies}</td>
-                         </tr>
-                      )
-                    }
-                  })}
+
                 </tbody>
               </table>
             <h3>North</h3>
@@ -160,18 +152,7 @@ var Standings = React.createClass({
                   </tr>
                 </thead>
                 <tbody>
-                  {this.state.teams.map(function(team, i){
-                    if (team.divisionName === 'NFC North') {
-                      return (
-                         <tr>
-                           <td>{team.teamName} ({team.playoffStatus}) </td>
-                           <td>{team.totalWins}</td>
-                           <td>{team.totalLosses}</td>
-                           <td>{team.totalTies}</td>
-                         </tr>
-                      )
-                    }
-                  })}
+
                 </tbody>
               </table>
             <h3>South</h3>
@@ -185,18 +166,7 @@ var Standings = React.createClass({
                   </tr>
                 </thead>
                 <tbody>
-                  {this.state.teams.map(function(team, i){
-                    if (team.divisionName === 'NFC South') {
-                      return (
-                         <tr>
-                           <td>{team.teamName} ({team.playoffStatus})</td>
-                           <td>{team.totalWins}</td>
-                           <td>{team.totalLosses}</td>
-                           <td>{team.totalTies}</td>
-                         </tr>
-                      )
-                    }
-                  })}
+
                 </tbody>
               </table>
             <h3>West</h3>
@@ -210,18 +180,7 @@ var Standings = React.createClass({
                   </tr>
                 </thead>
                 <tbody>
-                  {this.state.teams.map(function(team, i){
-                    if (team.divisionName === 'NFC West') {
-                      return (
-                         <tr>
-                           <td>{team.teamName} ({team.playoffStatus})</td>
-                           <td>{team.totalWins}</td>
-                           <td>{team.totalLosses}</td>
-                           <td>{team.totalTies}</td>
-                         </tr>
-                      )
-                    }
-                  })}
+
                 </tbody>
               </table>
           </div>
