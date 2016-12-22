@@ -3,18 +3,17 @@ var data = require('json!../../public/data/teamStandingInfoList.json');
 
 var Standings = React.createClass({
   getInitialState: function() {
-    var teams = data;
+    // var teams = data;
 
     var groups = {};
     for(var i = 0; i < data.length; i++) {
       var item = data[i];
 
-      if(!groups[item.divisionName]) {
-          groups[item.divisionName] = [];
+      if(!groups[item.conferenceName]) {
+          groups[item.conferenceName] = [];
       }
 
-      groups[item.divisionName].push({
-          divisionName: item.divisionName,
+      groups[item.conferenceName].push({
           teamName: item.teamName,
           wins: item.totalWins,
           losses: item.totalLosses,
@@ -31,8 +30,9 @@ var Standings = React.createClass({
           result.push(obj);
       }
     }
-    console.log(groups);
-    return { groups }
+
+    console.log(result);
+    return { result }
 
   },
   componentDidMount: function() {
@@ -48,19 +48,34 @@ var Standings = React.createClass({
         <div className="row">
           <div className="columns small-12">
             <h2>Total Teams</h2>
+              {this.state.result.map(function(conference, i){
+                console.log(conference)
+                      return (
+                        <div key={i}>
+                            {Object.keys(conference).map(function(key) {
+                              var conferenceTeams = conference[key];
+                              console.log('Conference as Key: ' + key)
+                              console.log('Teams belonging to Key as value ' + conferenceTeams)
+                                return (
+                                  <div>
+                                    <h4>Conference: {key}</h4>
+                                    {conferenceTeams.map(function(teams){
+                                      console.log(teams.teamName);
+                                      return (
+                                        <h5>{teams.teamName}</h5>
+                                      )
+                                    })}
 
-              {Object.keys(this.state.groups).map(function(division) {
-                    return (
-                      <div>
-                        <h3>{division}</h3>
-                        {/* Try then mapping through the keys of Division */}
+                                  </div>
+                                )
+                            })}
+                        </div>
 
 
-                      </div>
 
-                    )
-                })}
+                      )
 
+                  })}
           </div>
         </div>
         <div className="row">
