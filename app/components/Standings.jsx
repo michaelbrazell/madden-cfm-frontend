@@ -45,15 +45,15 @@ var Standings = React.createClass({
                 {Object.keys(division).map(function(key, i) {
                   var divisionTeams = division[key];
                     return (
-                      <div key={i}>
+                      <div className="division-table" key={i}>
                         <h3>{key}</h3>
                         <table className="tablesorter">
                           <thead>
                             <tr>
-                              <th></th>
-                              <th>W</th>
-                              <th>L</th>
-                              <th>T</th>
+                              <th width="55%"></th>
+                              <th width="15%">W</th>
+                              <th width="15%">L</th>
+                              <th width="15%">T</th>
                             </tr>
                           </thead>
                           <tbody>

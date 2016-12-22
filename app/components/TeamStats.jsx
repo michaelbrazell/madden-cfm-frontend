@@ -35,7 +35,7 @@ var TeamStats = React.createClass({
                 <tbody>
                   {this.state.teams.map(function(team, i){
                     return (
-                      <tr>
+                      <tr key={i}>
                         <td>{team.teamName}</td>
                         <td>{team.rank}</td>
                         <td>{team.totalWins} - {team.totalLosses} - {team.totalTies}</td>
