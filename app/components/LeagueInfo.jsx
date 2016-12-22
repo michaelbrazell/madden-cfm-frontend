@@ -16,9 +16,11 @@ var LeagueInfo = React.createClass({
           <li>Link up teams
             <ul>
               <li>Look into adding rosters</li>
-              <li>Dyanmic team routes</li>
+              <li>Dynamic team routes</li>
             </ul>
           </li>
+          <li>Add archived data and archiving system</li>
+          <li>Add week count to nav from teamStandingInfo</li>
           <li>Change styling:
             <ul>
               <li>Add badge for user owned teams</li>

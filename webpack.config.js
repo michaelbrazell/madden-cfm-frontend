@@ -30,6 +30,7 @@ module.exports = {
       Standings: 'app/components/Standings.jsx',
       TeamCard: 'app/components/TeamCard.jsx',
       TeamStats: 'app/components/TeamStats.jsx',
+      Teams: 'app/components/Teams.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']

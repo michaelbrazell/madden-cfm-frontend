@@ -1,5 +1,5 @@
 var React = require('react');
-var {Link, IndexLink} = require('react-router'); // Destructured ES6, require('react-router').link;
+var {Link, IndexLink} = require('react-router');
 
 var Nav = React.createClass({
   render: function () {
@@ -13,6 +13,7 @@ var Nav = React.createClass({
                 <li><IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'Bold'}}>Home</IndexLink></li>
                 <li><Link to="/standings" activeClassName="active" activeStyle={{fontWeight: 'Bold'}}>Standings</Link></li>
                 <li><Link to="/team-stats" activeClassName="active" activeStyle={{fontWeight: 'Bold'}}>Team Stats</Link></li>
+                <li><Link to="/team-rosters" activeClassName="active" activeStyle={{fontWeight: 'Bold'}}>Rosters</Link></li>
               </ul>
             </div>
           </div>
