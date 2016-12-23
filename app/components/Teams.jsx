@@ -1,5 +1,5 @@
 var React = require('react');
-var data = require('json!../../public/data/teamStandingInfoList.json');
+var TeamSelect = require('TeamSelect');
 
 var Teams = React.createClass({
   getInitialState: function () {
@@ -23,10 +23,13 @@ var Teams = React.createClass({
               </div>
                 <div className="columns small-12 medium-6">
                   {/* This should be a component that maintains its own state */}
-                  <select onChange={this.updateRoster}>
-                    <option value="49ers">49ers</option>
-                    <option value="Rams">Rams</option>
-                  </select>
+                  <TeamSelect />
+                  { /* Old select system with method to update roster
+                    <select onChange={this.updateRoster}>
+                      <option value="49ers">49ers</option>
+                      <option value="Rams">Rams</option>
+                    </select>
+                  */}
                 </div>
             </div>
             <div className="row">
