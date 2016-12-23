@@ -1,10 +1,13 @@
 var React = require('react');
-var TeamSelect = require('TeamSelect');
+// var TeamSelect = require('TeamSelect');
+var teamData = require('json!../../public/data/leagueTeamInfoList.json');
 
 var Teams = React.createClass({
   getInitialState: function () {
+    var teamList = {};
     return {
-      team: '49ers'
+      team: 'Choose a Team',
+      teamList: teamData
     }
   },
   updateRoster: function (e) {
@@ -13,23 +16,23 @@ var Teams = React.createClass({
     })
   },
   render: function() {
+    console.log(this.state.teamList);
     return (
       <div className="row">
         <div className="columns small-12">
           <h1>Team Rosters</h1>
             <div className="row">
               <div className="columns small-12 medium-6">
-                <h2>Teams - {this.state.team}</h2>
+                <h2>{this.state.team}</h2>
               </div>
                 <div className="columns small-12 medium-6">
-                  {/* This should be a component that maintains its own state */}
-                  <TeamSelect />
-                  { /* Old select system with method to update roster
-                    <select onChange={this.updateRoster}>
-                      <option value="49ers">49ers</option>
-                      <option value="Rams">Rams</option>
-                    </select>
-                  */}
+                  <select onChange={this.updateRoster}>
+                    {this.state.teamList.map(function(team, i) {
+                      return (
+                        <option key={i} value={team.cityName +' '+team.displayName}>{team.cityName} {team.displayName}</option>
+                      )
+                    })}
+                  </select>
                 </div>
             </div>
             <div className="row">
@@ -39,7 +42,13 @@ var Teams = React.createClass({
                 </ul>
                 <p>To do:</p>
                 <ul>
-                  <li>Make select choice its own component</li>
+                  <li>Populate Rosters</li>
+                  <li>Break team select into separate component
+                    <ul>
+                      <li>Can use TeamSelect component</li>
+                      <li>Need to use some sort of state control like Flux, Redux for one component updating the state of another component</li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
             </div>

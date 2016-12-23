@@ -9,7 +9,7 @@ var TeamSelect = React.createClass({
   render: function () {
     /* Need to tie this into webpack, currently does nothing */
     return (
-      <select>
+      <select onChange={this.updateRoster}>
         {this.state.teams.map(function(team, i) {
           return (
             <option key={i} value={team.abbrName}>{team.cityName} {team.displayName}</option>
