@@ -1,5 +1,5 @@
 var React = require('react');
-var data = require('json!../../public/data/teamStandingInfoList.json');
+var data = require('json!teamStandingsInfoList');
 
 var Standings = React.createClass({
   getInitialState: function() {

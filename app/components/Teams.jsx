@@ -1,6 +1,6 @@
 var React = require('react');
 // var TeamSelect = require('TeamSelect');
-var teamData = require('json!../../public/data/leagueTeamInfoList.json');
+var teamData = require('json!leagueTeamInfoList');
 
 var Teams = React.createClass({
   getInitialState: function () {

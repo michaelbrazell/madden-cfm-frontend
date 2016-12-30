@@ -3,8 +3,8 @@ var webpack = require('webpack');
 module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
-    // 'script!foundation-sites/dist/jsfoundation.min.js',
-    'script!foundation-sites/dist/foundation.min.js',
+    'script!foundation-sites/dist/js/foundation.min.js',
+    // 'script!foundation-sites/dist/foundation.min.js',
     'script!tablesorter/dist/js/jquery.tablesorter.min.js',
     './app/app.jsx'
   ],
@@ -32,6 +32,8 @@ module.exports = {
       TeamStats: 'app/components/TeamStats.jsx',
       Teams: 'app/components/Teams.jsx',
       TeamSelect: 'app/components/TeamSelect.jsx',
+      teamStandingsInfoList: 'public/data/teamStandingInfoList.json',
+      leagueTeamInfoList: 'public/data/leagueTeamInfoList.json',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']
