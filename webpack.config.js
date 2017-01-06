@@ -36,6 +36,7 @@ module.exports = {
       teamStandingsInfoList: 'public/data/teamStandingInfoList.json',
       leagueTeamInfoList: 'public/data/leagueTeamInfoList.json',
       rosterBAL: 'public/data/roster/rosterBAL.json',
+      rosterWAS: 'public/data/roster/rosterWAS.json',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']

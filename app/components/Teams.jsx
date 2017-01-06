@@ -2,37 +2,47 @@ var React = require('react');
 var TeamSelect = require('TeamSelect');
 var PlayerCard = require('PlayerCard');
 var teamData = require('json!leagueTeamInfoList');
-var Roster = require ('json!rosterBAL');
+var RosterBAL = require('json!rosterBAL');
+var RosterWAS = require('json!rosterWAS');
+// var UpdatedRoster = require('json!roster')
 
 var Teams = React.createClass({
   getInitialState: function () {
-    var teamList = {};
-    var teamRoster = {}
     return {
       team: 'Choose a Team',
       teamList: teamData,
-      teamRoster: Roster,
+      teamRoster: RosterBAL,
     }
   },
   updateRoster: function (e) {
-    this.setState({
-      team: e.target.value
-    })
+    // this is janky, uses conditional to change to washington Redskins but it works...
+    var teamName = e.target.value;
+    if (teamName === 'WAS') {
+      this.setState({
+        team: e.target.value,
+        teamRoster: RosterWAS,
+      })
+    } else {
+      this.setState({
+        team: e.target.value,
+        teamRoster: RosterBAL
+      })
+    }
   },
   render: function() {
     const teamSelectList = this.state.teamList.map((team, i) => {
       return (
         <TeamSelect
           key={i}
-          combinedName = {team.cityName + team.displayName}
-          cityName={team.cityName}
-          displayName={team.displayName}
+          abbrName={team.abbrName}
+          combinedName = {team.cityName + ' ' + team.displayName}
           />
       )
     });
     const players = this.state.teamRoster.map((player, i) => {
       return (
         <PlayerCard
+          key={player.lastName + '-' + i}
           firstName={player.firstName}
           lastName={player.lastName}
           position={player.position}
@@ -72,18 +82,6 @@ var Teams = React.createClass({
                 <ul>
                   <li>Build hash table of teams/teamID, refer to leagueTeamInfoList</li>
                   <li>Write Function that matches teamID from roster file and teamInfo file, and then uses name associated to that comparison</li>
-                  <li>Break team select into separate component
-                    <ul>
-                      <li>Can use TeamSelect component</li>
-                      <li>Need to use some sort of state control like Flux, Redux for one component updating the state of another component</li>
-                    </ul>
-                  </li>
-                  <li>Break player card into separate component
-                    <ul>
-                      <li>Need to get team state from parent component</li>
-                      <li>Can use teamID</li>
-                    </ul>
-                  </li>
                 </ul>
               </div>
             </div>
