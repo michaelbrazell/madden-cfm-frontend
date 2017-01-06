@@ -19,7 +19,6 @@ var Teams = React.createClass({
     })
   },
   render: function() {
-    console.log(this.state.teamRoster);
     return (
       <div className="row">
         <div className="columns small-12">

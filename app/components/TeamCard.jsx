@@ -1,33 +1,22 @@
 var React = require('react');
-var data = require('json!leagueTeamInfoList');
 
 var TeamCard = React.createClass({
-  getInitialState: function() {
-    var teams = data;
-    return { teams };
-  },
   render: function() {
     return (
-      <div>
-        {this.state.teams.map(function(team, i){
-           return (
-            <div className="columns small-12 medium-6 large-3" key={i}>
-              <div className="card">
-                <div className={'image color-'+ team.abbrName +' logo-'+ team.abbrName}>
-                  <span className="badge primary">{team.ovrRating}</span>
-                </div>
-                <div className="content">
-                  <p className="title">{team.cityName} {team.displayName}</p>
-                  <p>Division: {team.divName}</p>
-                  <p>{ team.userName.length > 1 ?  team.userName : 'Not owned' }</p>
-                </div>
-                <div className="action">
-                  <a href='#'>View Team</a>
-                </div>
-              </div>
-            </div>
-           )
-         })}
+      <div className="columns small-12 medium-6 large-3" key={this.props.key}>
+        <div className="card">
+          <div className={'image color-'+ this.props.abbrName +' logo-'+ this.props.abbrName}>
+            <span className="badge primary">{this.props.ovrRating}</span>
+          </div>
+          <div className="content">
+            <p className="title">{this.props.cityName} {this.props.displayName}</p>
+            <p>Division: {this.props.divName}</p>
+            <p>{ this.props.userName.length > 1 ?  this.props.userName : 'Not owned' }</p>
+          </div>
+          <div className="action">
+            <a href='#'>View Team</a>
+          </div>
+        </div>
       </div>
     );
   }

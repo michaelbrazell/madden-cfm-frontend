@@ -1,14 +1,31 @@
 var React = require('react');
 var TeamCard = require('TeamCard');
+var data = require('json!leagueTeamInfoList');
 
 var LeagueInfo = React.createClass({
+  getInitialState: function() {
+    var teams = data;
+    return { teams };
+  },
   render: function() {
+    const teamsList = this.state.teams.map((team) => {
+      return (
+        <TeamCard
+          key={'team-' + team.abbrName}
+          abbrName={team.abbrName}
+          ovrRating={team.ovrRating}
+          cityName={team.cityName}
+          displayName={team.displayName}
+          divName={team.divName}
+          userName={team.userName} />
+      );
+    });
     return (
       <div>
         <h1>League Overview</h1>
         <h2>Teams</h2>
         <div className="row">
-          <TeamCard />
+          {teamsList}
         </div>
         <p>To do:</p>
         <ul>
