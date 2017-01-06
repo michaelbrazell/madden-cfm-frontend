@@ -82,6 +82,7 @@ var Teams = React.createClass({
                 <ul>
                   <li>Build hash table of teams/teamID, refer to leagueTeamInfoList</li>
                   <li>Write Function that matches teamID from roster file and teamInfo file, and then uses name associated to that comparison</li>
+                  <li>Optional: Use if statement for position to drill down positions. Goes inside of players const before render</li>
                 </ul>
               </div>
             </div>
