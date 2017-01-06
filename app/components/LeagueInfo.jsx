@@ -8,10 +8,10 @@ var LeagueInfo = React.createClass({
     return { teams };
   },
   render: function() {
-    const teamsList = this.state.teams.map((team) => {
+    const teamsList = this.state.teams.map((team, i) => {
       return (
         <TeamCard
-          key={'team-' + team.abbrName}
+          key={'team-' + i + '-' + team.abbrName}
           abbrName={team.abbrName}
           ovrRating={team.ovrRating}
           cityName={team.cityName}

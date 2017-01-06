@@ -1,5 +1,5 @@
 var React = require('react');
-// var TeamSelect = require('TeamSelect');
+var TeamSelect = require('TeamSelect');
 var teamData = require('json!leagueTeamInfoList');
 var Roster = require ('json!rosterBAL');
 
@@ -19,6 +19,16 @@ var Teams = React.createClass({
     })
   },
   render: function() {
+    const teamSelectList = this.state.teamList.map((team, i) => {
+      return (
+        <TeamSelect
+          key={i}
+          abbrName={team.abbrName}
+          cityName={team.cityName}
+          displayName={team.displayName}
+          />
+      )
+    });
     return (
       <div className="row">
         <div className="columns small-12">
@@ -29,11 +39,7 @@ var Teams = React.createClass({
               </div>
                 <div className="columns small-12 medium-6">
                   <select onChange={this.updateRoster}>
-                    {this.state.teamList.map(function(team, i) {
-                      return (
-                        <option key={i} value={team.cityName +' '+team.displayName}>{team.cityName} {team.displayName}</option>
-                      )
-                    })}
+                    {teamSelectList}
                   </select>
                 </div>
             </div>
