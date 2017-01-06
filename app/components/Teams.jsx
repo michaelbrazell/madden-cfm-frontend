@@ -17,7 +17,7 @@ var Teams = React.createClass({
   updateRoster: function (e) {
     // this is janky, uses conditional to change to washington Redskins but it works...
     var teamName = e.target.value;
-    if (teamName === 'WAS') {
+    if (teamName === 'Washington Redskins') {
       this.setState({
         team: e.target.value,
         teamRoster: RosterWAS,
