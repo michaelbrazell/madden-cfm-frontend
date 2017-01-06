@@ -1,5 +1,6 @@
 var React = require('react');
 var TeamSelect = require('TeamSelect');
+var PlayerCard = require('PlayerCard');
 var teamData = require('json!leagueTeamInfoList');
 var Roster = require ('json!rosterBAL');
 
@@ -23,9 +24,21 @@ var Teams = React.createClass({
       return (
         <TeamSelect
           key={i}
-          abbrName={team.abbrName}
+          combinedName = {team.cityName + team.displayName}
           cityName={team.cityName}
           displayName={team.displayName}
+          />
+      )
+    });
+    const players = this.state.teamRoster.map((player, i) => {
+      return (
+        <PlayerCard
+          firstName={player.firstName}
+          lastName={player.lastName}
+          position={player.position}
+          age={player.age}
+          college={player.college}
+          playerBestOvr={player.playerBestOvr}
           />
       )
     });
@@ -46,16 +59,7 @@ var Teams = React.createClass({
             <div className="row">
               <div className="columns small-12">
                 <div className="row" data-equalizer>
-                  {this.state.teamRoster.map(function(player, i) {
-                    return (
-                      <div key={i} className="columns small-6 medium-3">
-                        <div className="callout" data-equalizer-watch>
-                          <h4>{player.firstName} {player.lastName}, {player.position}</h4>
-                          <p><strong>Age</strong>: {player.age}, <strong>College</strong>: {player.college}, <strong>Overall</strong>: {player.playerBestOvr}</p>
-                        </div>
-                      </div>
-                    )
-                  })}
+                  {players}
                 </div>
               </div>
             </div>

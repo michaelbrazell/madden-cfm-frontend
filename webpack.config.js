@@ -32,6 +32,7 @@ module.exports = {
       TeamStats: 'app/components/TeamStats.jsx',
       Teams: 'app/components/Teams.jsx',
       TeamSelect: 'app/components/TeamSelect.jsx',
+      PlayerCard: 'app/components/PlayerCard.jsx',
       teamStandingsInfoList: 'public/data/teamStandingInfoList.json',
       leagueTeamInfoList: 'public/data/leagueTeamInfoList.json',
       rosterBAL: 'public/data/roster/rosterBAL.json',
